@@ -1,0 +1,495 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  /* --color-primary: #111644;
+  --color-secondary: #1d245e; */
+  --color-primary: #1d245e;
+  --color-secondary: #111644;
+  --color-base: #f0f0f0;
+  --color-text-primary: #3b3b3b;
+  --color-text-secondary: #0e0e0e;
+
+  --font-size-xsmall: 0.625rem;
+  --font-size-small: 0.813rem;
+  --font-size-regular: 1rem;
+  --font-size-large: 1.25rem;
+  --font-size-xlarge: 1.875rem;
+  --font-w-light: 300;
+  --font-w-normal: 400;
+  --font-w-semibold: 600;
+  --font-w-bold: 800;
+
+  --bx-shdw: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  --padd: 15px;
+  --header: 60px;
+
+  --z-index-top: 100;
+  --z-index-medium: 10;
+  --z-index-below: 1;
+}
+
+body {
+  background-color: #f0f0f0;
+  color: #3b3b3b;
+  font-family: "Poppins";
+  font-size: 1rem;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-text-primary);
+}
+
+li {
+  list-style: none;
+}
+
+.mg-t {
+  margin-top: 1rem;
+}
+
+.mg-b {
+  margin-bottom: 1rem;
+}
+
+.header {
+  height: var(--header);
+  background-color: #fff;
+  display: grid;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: var(--z-index-top);
+  box-shadow: var(--bx-shdw);
+}
+
+.go__top {
+  display: none;
+}
+
+.go__top.sticky {
+  display: block;
+  position: fixed;
+  background-color: var(--color-primary);
+  border-radius: 15px;
+  padding: 15px;
+  right: 15px;
+  bottom: 30px;
+  font-size: 1.2rem;
+  line-height: 1;
+  box-shadow: var(--bx-shdw);
+  z-index: var(--z-index-medium);
+  transition: 0.3s;
+}
+
+.go__top.sticky:hover {
+  background-color: var(--color-secondary);
+  transition: 0.3s;
+}
+
+.title__container {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.title-logo {
+  font-size: var(--font-size-large);
+  font-weight: var(--font-w-semibold);
+}
+
+.toggle__menu {
+  font-size: 25px;
+}
+
+.menu__action {
+  display: none;
+}
+
+.menu {
+  position: absolute;
+  width: 100%;
+  top: var(--header);
+  background-color: var(--color-primary);
+  border-radius: 0 0 10px 10px;
+  box-shadow: var(--bx-shdw);
+  transition: .3s;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+
+.link {
+  color: #fff;
+  margin: 15px 0;
+  font-weight: bold;
+}
+
+.active-link::after {
+  content: '';
+  display: block;
+  width: 35%;
+  background-color: #fff;
+  transition: width .3s;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  margin: auto;
+}
+
+.contenedor {
+  background-color: #f0f0f0;
+}
+
+.home {
+  background: -webkit-linear-gradient(to right, #434343, #000000), url(https://www.stackscale.com/wp-content/uploads/2020/09/top-10-programming-languages-2020-Stackscale.jpg);
+  background: linear-gradient(to right,
+      hsla(0, 0%, 13%, 0.863),
+      hsla(0, 0%, 0%, 0.39)),
+    url(https://www.stackscale.com/wp-content/uploads/2020/09/top-10-programming-languages-2020-Stackscale.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+
+.home__main_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  height: calc(100vh - (var(--header)));
+  color: #fff;
+}
+
+.home__main_text h1 {
+  text-align: center;
+  font-size: calc(var(--font-size-xlarge) + 10px);
+}
+
+.btn {
+  color: var(--color-base);
+  background-color: var(--color-primary);
+  padding: 10px 30px;
+  border-radius: 35px;
+  font-size: var(--font-size-regular);
+  font-weight: 500;
+  box-shadow: var(--bx-shdw);
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--color-secondary);
+  transition: 0.3s;
+}
+
+.btn-download {
+  justify-self: center;
+  width: 190px;
+}
+
+.btn-portafolio {
+  background-color: #fff;
+  outline: none;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  cursor: pointer;
+  box-shadow: none;
+  transition: 0.3s;
+  width: auto;
+  padding: 8px 13px;
+  font-size: var(--font-size-small);
+}
+
+.btn-portafolio:hover {
+  background-color: var(--color-primary);
+  border: 1px solid #fff;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.section {
+  padding: 3.5rem 1rem;
+}
+
+.title {
+  font-size: var(--font-size-xlarge);
+}
+
+.about, .abilities, .projects, .contact, .footer {
+  text-align: center;
+}
+
+img {
+  width: 250px;
+}
+
+.profile {
+  border-radius: 15px;
+  box-shadow: var(--bx-shdw);
+}
+
+.about__description {
+  display: grid;
+  grid-template-rows: repeat(2, max-content);
+  gap: 1rem;
+}
+
+.wrapper__tool {
+  border: 1px solid #fff;
+  box-shadow: var(--bx-shdw);
+  padding: 15px;
+  border-radius: 15px;
+  width: 80px;
+  background-color: #fff;
+  /* height: 90px; */
+}
+
+.icon-tool {
+  width: 2.5rem;
+}
+
+.tool-col {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.card__project {
+  border-radius: 15px;
+  background-color: #fff;
+  box-shadow: var(--bx-shdw);
+}
+
+.portafolio-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+}
+
+.portafolio__details {
+  text-align: left;
+  padding: 15px;
+}
+
+.project__coverimage {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 15px 15px 0 0;
+}
+
+.text-color {
+  color: var(--color-primary);
+  font-weight: var(--font-w-bold);
+}
+
+.projects__buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.footer {
+  background-color: var(--color-text-secondary);
+}
+
+.icon {
+  color: #fff;
+  font-size: 20px;
+}
+
+
+@media screen and (min-width: 576px) {
+  body {
+    /* background-color: rgb(255, 0, 0); */
+  }
+
+  .portafolio-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+
+@media screen and (min-width: 768px) {
+
+  :root {
+    --font-size-xsmall: 0.813rem;
+    --font-size-small: 1rem;
+    --font-size-regular: 1.25rem;
+    --font-size-large: 1.25rem;
+    --font-size-xlarge: 2.813rem;
+
+    --padd: 15px;
+    --header: 50px;
+  }
+
+  body {
+    /* background-color: rgb(255, 187, 0); */
+  }
+
+  .title-logo {
+    font-size: var(--font-size-large) !important;
+  }
+
+  .title {
+    font-size: calc(var(--font-size-xlarge) - 15px);
+  }
+
+  .menu {
+    position: static;
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .toggle__menu {
+    position: absolute;
+    top: -100px;
+  }
+
+  .menu__action {
+    display: block;
+  }
+
+  .list {
+    display: flex;
+    gap: 1rem;
+    padding-right: 15px;
+
+  }
+
+  .link {
+    color: var(--color-text-primary);
+    margin: 0;
+  }
+
+  .link::after {
+    content: '';
+    display: block;
+    width: 0;
+    background-color: var(--color-primary);
+    transition: width .3s;
+    position: absolute;
+    bottom: -3px;
+    left: auto;
+    height: 3px;
+  }
+
+  .link:hover::after {
+    width: 100%;
+  }
+
+  .active-link {
+    color: var(--color-text-primary);
+    margin: 0;
+  }
+
+  .active-link::after {
+    content: '';
+    display: block;
+    width: 100%;
+    background-color: var(--color-primary);
+    transition: width .3s;
+    position: absolute;
+    bottom: -3px;
+    left: auto;
+    height: 3px;
+  }
+
+  .header {
+    grid-template-columns: max-content auto;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px 0 0;
+  }
+
+  img {
+    width: 20rem;
+  }
+
+  .about-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    justify-items: center;
+  }
+
+  img {
+    width: 250px;
+  }
+
+  .btn-download {
+    width: 190px;
+    height: 30px;
+    padding: 10px 20px;
+  }
+
+  .about__description {
+    justify-items: center;
+  }
+
+  .abilities-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    justify-items: center;
+  }
+
+  .portafolio-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  body {
+    /* background-color: rgb(0, 255, 13); */
+  }
+
+  .section {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    /* background-color: rgb(0, 153, 255); */
+  }
+
+  .section {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  body {
+    /* background-color: rgb(162, 0, 255); */
+  }
+
+}
