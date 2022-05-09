@@ -211,15 +211,16 @@ li {
 
 .btn-portafolio {
   background-color: #fff;
-  outline: none;
   border: 1px solid var(--color-primary);
   color: var(--color-primary);
   cursor: pointer;
   box-shadow: none;
   transition: 0.3s;
   width: auto;
-  padding: 8px 13px;
+  padding: 8px 10px;
   font-size: var(--font-size-small);
+  text-align: center;
+  align-self: center;
 }
 
 .btn-portafolio:hover {
@@ -322,6 +323,15 @@ img {
   font-size: 20px;
 }
 
+.technologies-icon {
+  width: 30px;
+  height: 30px;
+  background-color: #ffffff;
+  padding: 3px;
+  border-radius: 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  margin: 5px 5px 0 0;
+}
 
 @media screen and (min-width: 576px) {
   body {
